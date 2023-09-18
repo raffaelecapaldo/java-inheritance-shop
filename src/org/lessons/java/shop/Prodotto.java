@@ -8,6 +8,14 @@ public class Prodotto {
 	private double prezzo;
 	private double iva;
 	
+	Prodotto(String codice, String nome, String marca,
+			double prezzo, double iva) {
+		this.codice = codice;
+		setNome(nome);
+		setMarca(marca);
+		setPrezzo(prezzo);
+		setIva(iva);
+	}
 	
 	public String getCodice() {
 		return codice;
