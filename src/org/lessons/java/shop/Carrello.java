@@ -18,7 +18,7 @@ public class Carrello {
 		
 		
 		System.out.print("Inserisci il numero corrispondete al prodotto da acquistare: ");
-		String selezione = sc.nextLine();
+		String selezione = sc.nextLine().trim();
 		
 		System.out.print("Inserire il codice prodotto: ");
 		String codice = sc.nextLine();
@@ -40,7 +40,7 @@ public class Carrello {
 			System.out.print("Inserire il codice IMEI dello smartphone: ");
 			IMEI = sc.nextLine();
 			System.out.print("Inserire la quantità di memoria dello Smartphone: ");
-			memoria = sc.nextInt();
+			memoria = Integer.parseInt(sc.nextLine());
 			
 			
 			
@@ -85,9 +85,9 @@ public class Carrello {
 		}
 		
 		System.out.print("Inserisci il prezzo del prodotto: ");
-		double prezzo = sc.nextDouble();
+		double prezzo = Double.parseDouble(sc.nextLine());
 		System.out.print("Inserisci l'iva del prodotto");
-		double iva = sc.nextDouble();
+		double iva = Double.parseDouble(sc.nextLine());
 		
 		switch(selezione) {
 		case "1":
@@ -102,7 +102,14 @@ public class Carrello {
 		}
 		
 		
-	}}
+	}
+		
+	for (int i = 0; i < prodotti.length; i++) {
+		System.out.println("PROD NUM: " + (i+1) + prodotti[i].toString());
+		}
+	
+	
+	}
 	
 	
 

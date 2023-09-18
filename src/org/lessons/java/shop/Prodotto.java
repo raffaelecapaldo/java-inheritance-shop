@@ -42,7 +42,7 @@ public class Prodotto {
 	}
 	
 	public String getPrezzoPubblico() {
-		return String.format("%.2f", (prezzo+iva));
+		return String.format("%.2f", (prezzo+iva)) + "€";
 	}
 	
 	public void setPrezzo(double prezzo) {
@@ -57,6 +57,15 @@ public class Prodotto {
 		this.iva = iva;
 	}
 	
+	@Override
+	public String toString() {
+		return " Codice prodotto: " + getCodice()
+				+ " Nome prodotto: " + getNome()
+				+ " Marca prodotto: " + getMarca()
+				+ " Prezzo prodotto: " + getPrezzo()
+				+ " Iva prodotto: " + getIva()
+				+ " Prezzo finale: " + getPrezzoPubblico();
+ 	}
 	
 	
 	
