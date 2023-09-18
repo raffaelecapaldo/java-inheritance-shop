@@ -35,4 +35,13 @@ public class Cuffie extends Prodotto {
 		return super.toString() + " Colore cuffie " + getColore()
 								+ " Tipo: " + (wireless ? "WIRELESS": "CABLATE");
 	}
+	
+	@Override
+	public void sconta() {
+		if (!isWireless()) {
+		super.setPrezzo(super.getPrezzo() -  (super.getPrezzo() * 7 / 100 ));
+		}
+		else {
+			super.sconta();
+		}}
 }

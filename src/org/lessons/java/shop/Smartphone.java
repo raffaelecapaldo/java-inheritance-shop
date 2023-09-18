@@ -34,5 +34,16 @@ public class Smartphone extends Prodotto {
 		return super.toString() + " Imei telefono: " + getIMEI()
 								+ " Memoria telefono: " + getMemoria();
 	}
+	
+	@Override
+	public void sconta() {
+		if (getMemoria() < 32) {
+		super.setPrezzo(super.getPrezzo() -  (super.getPrezzo() * 5 / 100 ));
+		}
+		else {
+			super.sconta();
+		}
+		
+	}
 
 }

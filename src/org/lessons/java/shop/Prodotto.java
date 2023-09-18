@@ -67,6 +67,10 @@ public class Prodotto {
 				+ " Prezzo finale: " + getPrezzoPubblico();
  	}
 	
+	public void sconta() {
+		this.prezzo = this.prezzo - (this.prezzo * 2 / 100);
+	}
+	
 	
 	
 	

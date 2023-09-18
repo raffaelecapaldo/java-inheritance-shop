@@ -37,6 +37,15 @@ public class Televisore extends Prodotto {
 		return super.toString() + " Dimensioni televisore: " + getDimensioni()
 								+ " SMART: " + (smart ? "SI" : "NO");
 	}
+	
+	@Override
+	public void sconta() {
+		if (!isSmart()) {
+		super.setPrezzo(super.getPrezzo() -  (super.getPrezzo() * 10 / 100 ));
+		}
+		else {
+			super.sconta();
+		}}
 
 
 }

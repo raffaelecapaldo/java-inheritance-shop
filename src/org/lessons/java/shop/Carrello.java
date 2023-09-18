@@ -7,6 +7,12 @@ public class Carrello {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
+		System.out.print("Hai la carta fedeltà? Rispondere con S o N: ");
+		boolean tesserato = false;
+		String answer = sc.nextLine().toLowerCase();
+		if (answer.contains("s")) {
+			tesserato = true;
+		}
 		System.out.print("Quanti prodotti vuoi acquistare?");
 		int numProdotti = Integer.parseInt(sc.nextLine());
 		Prodotto[] prodotti = new Prodotto[numProdotti];
@@ -49,7 +55,7 @@ public class Carrello {
 		case "2": 
 			System.out.print("Inserire le dimensioni del televisore: ");
 			dimensioni = Integer.parseInt(sc.nextLine());
-			System.out.print("Il televisore è SMART? Rispondere con S o N ");
+			System.out.print("Il televisore è SMART? Rispondere con S o N: ");
 			String answerA = sc.nextLine().toLowerCase();
 			if (answerA.contains("s")) {
 				smart = true;
@@ -64,7 +70,7 @@ public class Carrello {
 		case "3":
 			System.out.print("Inserire il colore delle cuffie: ");
 			colore = sc.nextLine();
-			System.out.print("Le cuffie sono WIRELESS? Rispondere con S o N");
+			System.out.print("Le cuffie sono WIRELESS? Rispondere con S o N: ");
 			String answerB = sc.nextLine();
 			if (answerB.contains("s")) {
 				wireless = true;
@@ -103,10 +109,18 @@ public class Carrello {
 		
 		
 	}
-		
+		sc.close();
+		double prezzoTotale = 0;
 	for (int i = 0; i < prodotti.length; i++) {
-		System.out.println("PROD NUM: " + (i+1) + prodotti[i].toString());
+		if (tesserato) {
+			prodotti[i].sconta();
 		}
+		
+		System.out.println("PROD NUM: " + (i+1) + prodotti[i].toString());
+		prezzoTotale += prodotti[i].getPrezzo()+prodotti[i].getIva();
+	}
+	
+	System.out.println("Prezzo finale" + (tesserato ? "(sconto tessera incluso): " : ": ") + String.format("%.2f", (prezzoTotale)) + "€" );
 	
 	
 	}
