@@ -42,7 +42,7 @@ public class Prodotto {
 	}
 	
 	public String getPrezzoPubblico() {
-		return String.format("%.2f", ((prezzo + (prezzo*iva) / 100))) + "€";
+		return String.format("%.2f", ((prezzo + ((prezzo*iva) / 100)))) + "€";
 	}
 	
 	public void setPrezzo(double prezzo) {

@@ -117,7 +117,7 @@ public class Carrello {
 		}
 		
 		System.out.println("PROD NUM: " + (i+1) + prodotti[i].toString());
-		prezzoTotale += prodotti[i].getPrezzo()+prodotti[i].getIva();
+		prezzoTotale += Double.parseDouble(prodotti[i].getPrezzoPubblico().replace(',', '.').replace("€", ""));
 	}
 	
 	System.out.println("Prezzo finale" + (tesserato ? "(sconto tessera incluso): " : ": ") + String.format("%.2f", (prezzoTotale)) + "€" );
