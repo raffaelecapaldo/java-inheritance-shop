@@ -2,23 +2,23 @@ package org.lessons.java.shop;
 
 public class Smartphone extends Prodotto {
 	
-	private String IMEI;
+	private String imei;
 	private int memoria;
 	
 	Smartphone(String codice, String nome, String marca,
-			double prezzo, double iva, String IMEI, int memoria) {
+			double prezzo, double iva, String imei, int memoria) {
 		super(codice, nome, marca, prezzo, iva);
-		setIMEI(IMEI);
+		setImei(imei);
 		setMemoria(memoria);
 		
 	}
 	
 	public String getImei() {
-		return IMEI;
+		return imei;
 	}
 	
-	public void setIMEI(String IMEI) {
-		this.IMEI = IMEI;
+	public void setImei(String imei) {
+		this.imei = imei;
 	}
 	
 	public int getMemoria() {
@@ -31,7 +31,7 @@ public class Smartphone extends Prodotto {
 	
 	@Override
 	public String toString() {
-		return super.toString() + " Imei telefono: " + getIMEI()
+		return super.toString() + " Imei telefono: " + getImei()
 								+ " Memoria telefono: " + getMemoria();
 	}
 	
