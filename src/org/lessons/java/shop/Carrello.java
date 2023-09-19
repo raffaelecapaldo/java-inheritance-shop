@@ -33,7 +33,7 @@ public class Carrello {
 		System.out.print("Inserire il nome della marca: ");
 		String marca = sc.nextLine();
 		
-		String IMEI = "";
+		String imei = "";
 		int memoria = 0;
 		int dimensioni = 0;
 		boolean smart = false;
@@ -44,7 +44,7 @@ public class Carrello {
 		switch (selezione) {
 		case "1": 
 			System.out.print("Inserire il codice IMEI dello smartphone: ");
-			IMEI = sc.nextLine();
+			imei = sc.nextLine();
 			System.out.print("Inserire la quantità di memoria dello Smartphone: ");
 			memoria = Integer.parseInt(sc.nextLine());
 			
@@ -97,7 +97,7 @@ public class Carrello {
 		
 		switch(selezione) {
 		case "1":
-			prodotti[i] = new Smartphone(codice, nome, marca, prezzo, iva, IMEI, memoria);
+			prodotti[i] = new Smartphone(codice, nome, marca, prezzo, iva, imei, memoria);
 			break;
 		case "2":
 			prodotti[i] = new Televisore(codice, nome, marca, prezzo, iva, dimensioni, smart);

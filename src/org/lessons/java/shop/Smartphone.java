@@ -13,7 +13,7 @@ public class Smartphone extends Prodotto {
 		
 	}
 	
-	public String getIMEI() {
+	public String getImei() {
 		return IMEI;
 	}
 	
