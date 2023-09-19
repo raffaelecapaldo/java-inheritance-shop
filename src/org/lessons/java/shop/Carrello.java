@@ -92,7 +92,7 @@ public class Carrello {
 		
 		System.out.print("Inserisci il prezzo del prodotto: ");
 		double prezzo = Double.parseDouble(sc.nextLine());
-		System.out.print("Inserisci l'iva del prodotto");
+		System.out.print("Inserisci percentuale iva del prodotto");
 		double iva = Double.parseDouble(sc.nextLine());
 		
 		switch(selezione) {

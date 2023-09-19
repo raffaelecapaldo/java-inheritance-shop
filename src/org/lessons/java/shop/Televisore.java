@@ -2,8 +2,8 @@ package org.lessons.java.shop;
 
 public class Televisore extends Prodotto {
 	
-	int dimensioni;
-	boolean smart;
+	private int dimensioni;
+	private boolean smart;
 	
 	Televisore(String codice, String nome, String marca,
 			double prezzo, double iva,
